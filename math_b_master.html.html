@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111827">
+<title>数学B MASTER｜公式暗記</title>
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--ink:#172033;--muted:#697386;--line:#e5e9f2;--blue:#4263eb;--blue2:#eef2ff;--green:#15966a;--red:#d9485f;--shadow:0 8px 28px rgba(24,39,75,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif}
+header{background:#111827;color:white;padding:24px 18px 22px} .wrap{max-width:980px;margin:auto}
+.brand{font-size:12px;letter-spacing:.14em;color:#a5b4fc;font-weight:800}.hero{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-top:8px}.hero h1{font-size:clamp(25px,5vw,38px);margin:0}.hero p{margin:7px 0 0;color:#cbd5e1;font-size:13px}.pill{background:#263449;border:1px solid #3b4b63;border-radius:999px;padding:7px 11px;font-size:11px;white-space:nowrap}
+main{max-width:980px;margin:auto;padding:16px 14px 48px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:-2px}.stat{background:var(--card);padding:14px;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.stat b{font-size:23px;display:block}.stat span{font-size:11px;color:var(--muted)}
+nav{display:flex;gap:7px;overflow:auto;padding:16px 0 12px;scrollbar-width:none}nav button{white-space:nowrap;border:1px solid var(--line);background:white;color:var(--muted);padding:10px 14px;border-radius:999px;font-weight:700}nav button.active{background:var(--blue);color:white;border-color:var(--blue)}
+.panel{display:none}.panel.active{display:block}.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:10px 0 14px}.section-head h2{font-size:20px;margin:0}.sub{font-size:12px;color:var(--muted)}
+input,select{font:inherit;border:1px solid var(--line);background:white;border-radius:12px;padding:11px 12px;color:var(--ink);width:100%;outline:none}input:focus,select:focus{border-color:var(--blue)}.filters{display:grid;grid-template-columns:1fr 170px;gap:9px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:15px;box-shadow:var(--shadow)}.tag{font-size:10px;color:var(--blue);font-weight:800;background:var(--blue2);border-radius:6px;padding:4px 7px}.card h3{font-size:15px;margin:10px 0}.formula{background:#f7f8fc;border:1px dashed #d8deeb;border-radius:11px;padding:13px;text-align:center;font-size:18px;font-weight:700;line-height:1.7;overflow-wrap:anywhere}.explain{font-size:12px;color:var(--muted);line-height:1.7;margin:10px 0}.actions{display:flex;gap:7px;flex-wrap:wrap}.btn{border:0;border-radius:11px;padding:10px 13px;font-weight:750;background:var(--blue);color:white;cursor:pointer}.btn.light{background:var(--blue2);color:var(--blue)}.btn.ghost{background:#f1f3f7;color:#475569}.btn:disabled{opacity:.4;cursor:not-allowed}
+.callout{padding:13px;border-radius:13px;background:#eff6ff;color:#28478e;font-size:12px;line-height:1.7;margin:12px 0}.quizbox{max-width:650px;margin:10px auto;background:white;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}.qmeta{font-size:11px;color:var(--muted);display:flex;justify-content:space-between}.question{font-size:19px;font-weight:800;line-height:1.6;margin:18px 0}.answer{display:grid;gap:9px}.choice{text-align:left;border:1px solid var(--line);border-radius:12px;padding:13px;background:white;font-size:14px;color:var(--ink);cursor:pointer}.choice:hover{border-color:var(--blue);background:#f8faff}.choice.correct{border-color:var(--green);background:#eaf8f2}.choice.wrong{border-color:var(--red);background:#fff0f2}.feedback{margin-top:13px;padding:12px;border-radius:12px;font-size:13px;line-height:1.6;display:none}.feedback.show{display:block}.progress{height:8px;background:#e9edf5;border-radius:9px;overflow:hidden;margin:13px 0}.progress div{height:100%;background:var(--blue);width:0;transition:.2s}.empty{text-align:center;color:var(--muted);padding:28px}.small{font-size:11px;color:var(--muted)}.unitrow{display:flex;align-items:center;justify-content:space-between;padding:13px;border-bottom:1px solid var(--line);gap:10px}.unitrow:last-child{border:0}.switch{accent-color:var(--blue);width:19px;height:19px}.reviewlist{display:grid;gap:9px}.reviewitem{background:white;border:1px solid var(--line);border-radius:13px;padding:13px;display:flex;justify-content:space-between;gap:10px;align-items:center}
+footer{text-align:center;color:#8a93a5;font-size:11px;padding:22px}
+@media(max-width:620px){.grid{grid-template-columns:1fr}.filters{grid-template-columns:1fr}.hero{align-items:start;flex-direction:column}.stats{gap:7px}.stat{padding:11px}.stat b{font-size:20px}.section-head{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="brand">STUDY TOOL / MATHEMATICS B</div>
+<div class="hero"><div><h1>数学B MASTER</h1><p>公式を見て、思い出して、使えるようにする。</p></div><div class="pill">スマホ対応・学習記録つき</div></div>
+</div></header>
+<main>
+<div class="stats">
+ <div class="stat"><b id="mastered">0</b><span>覚えた公式</span></div>
+ <div class="stat"><b id="attempts">0</b><span>クイズ回答数</span></div>
+ <div class="stat"><b id="rate">—</b><span>正答率</span></div>
+</div>
+<nav>
+<button class="active" data-tab="formulas">公式一覧</button><button data-tab="quiz">暗記クイズ</button><button data-tab="test">ランダムテスト</button><button data-tab="progress">学習記録</button><button data-tab="import">写真インポート</button><button data-tab="scope">授業範囲設定</button>
+</nav>
+
+<section id="formulas" class="panel active">
+ <div class="section-head"><h2>公式一覧</h2><span class="sub" id="formulaCount"></span></div>
+ <div class="filters"><input id="search" placeholder="公式名・キーワードで検索"><select id="unitFilter"><option value="all">すべての分野</option></select></div>
+ <div class="callout">まず公式を確認しよう。右下の「覚えた」を押すと学習記録に反映されるよ。学校でまだ習っていない分野は「授業範囲設定」で非表示にできます。</div>
+ <div class="grid" id="formulaGrid"></div>
+</section>
+
+<section id="quiz" class="panel">
+ <div class="section-head"><h2>暗記クイズ</h2><span class="sub">公式を思い出す練習</span></div>
+ <div class="quizbox" id="quizBox"></div>
+</section>
+<section id="test" class="panel">
+ <div class="section-head"><h2>ランダムテスト</h2><span class="sub">出題は毎回シャッフル</span></div>
+ <div class="quizbox" id="testBox"></div>
+</section>
+<section id="progress" class="panel">
+ <div class="section-head"><h2>学習記録</h2><span class="sub">この端末のブラウザに保存</span></div>
+ <div class="card"><h3>公式の暗記状況</h3><div class="progress"><div id="masterProgress"></div></div><p id="progressText" class="small"></p></div>
+ <h3 style="font-size:15px;margin-top:20px">覚えた公式</h3><div class="reviewlist" id="masteredList"></div>
+ <div style="margin-top:16px"><button class="btn ghost" id="reset">学習記録をリセット</button></div>
+</section>
+
+<section id="import" class="panel">
+ <div class="section-head"><h2>写真から公式を登録</h2><span class="sub">自分専用の公式集を作ろう</span></div>
+ <div class="card">
+  <h3>① プリント・教科書の写真を選ぶ</h3>
+  <p class="explain">スマホで撮った写真や、保存済みの画像を選択できます。選んだ画像はこのブラウザ内で表示されます。</p>
+  <input id="photoFiles" type="file" accept="image/*" multiple>
+  <div id="photoGallery" class="grid" style="margin-top:12px"></div>
+ </div>
+ <div class="card" style="margin-top:12px">
+  <h3>② 写真を見ながら公式を登録</h3>
+  <p class="explain">画像の数式を下の欄に入力して登録すると、公式一覧・暗記クイズ・ランダムテストに追加されます。</p>
+  <div style="display:grid;gap:9px">
+   <label class="small">分野<select id="newUnit"><option>数列</option><option>統計的な推測</option><option>学校独自の範囲</option></select></label>
+   <label class="small">公式の名前<input id="newName" placeholder="例：等差数列の一般項"></label>
+   <label class="small">公式<input id="newFormula" placeholder="例：aₙ = a₁ + (n − 1)d"></label>
+   <label class="small">説明・使い方<input id="newDesc" placeholder="例：初項 a₁、公差 d"></label>
+   <label class="small">クイズの問題文<input id="newQuestion" placeholder="例：等差数列の一般項は？"></label>
+   <label class="small">正解（公式と同じ内容）<input id="newAnswer" placeholder="例：aₙ = a₁ + (n − 1)d"></label>
+   <label class="small">選択肢（4つ・「,」で区切る）<input id="newOptions" placeholder="正解の式,選択肢2,選択肢3,選択肢4"></label>
+   <button class="btn" id="addFormula">この公式を追加する</button>
+   <p id="importMessage" class="small" aria-live="polite"></p>
+  </div>
+ </div>
+ <div class="callout"><b>写真の自動読み取りについて</b><br>このHTML版は画像の取り込み・表示に対応していますが、画像内の数式を自動で文字に変換するOCR機能はまだありません。数式を入力して登録する方式です。写真をこのチャットに送ってくれれば、数式の読み取りや整理も手伝えます。</div>
+ <h3 style="font-size:15px;margin-top:20px">自分で追加した公式</h3>
+ <div id="customList" class="reviewlist"></div>
+</section>
+
+<section id="scope" class="panel">
+ <div class="section-head"><h2>授業範囲設定</h2><span class="sub">習った分野だけ表示</span></div>
+ <div class="card" id="unitSettings"></div>
+ <div class="callout">学校の進度に合わせて分野をオン・オフできます。数学Bの一般的な範囲を初期設定にしています。教科書や先生の指定範囲と違う場合はここで調整してね。</div>
+</section>
+<footer>数学B MASTER · 学習記録はこのブラウザ内に保存されます</footer>
+</main>
+<script>
+const builtInFormulas=[
+{ id:"s1",unit:"数列",name:"等差数列の一般項",f:"aₙ = a₁ + (n − 1)d",desc:"初項 a₁、公差 d。初項から n−1 回、公差を足す。",q:"等差数列の一般項は？",a:"aₙ = a₁ + (n − 1)d",opts:["aₙ = a₁ + (n − 1)d","aₙ = a₁rⁿ⁻¹","Sₙ = n(a₁+aₙ)/2","aₙ = a₁ + nd"]},
+{ id:"s2",unit:"数列",name:"等差数列の和",f:"Sₙ = n(a₁ + aₙ) / 2",desc:"初項と末項の平均に、項数 n をかける。",q:"等差数列の和 Sₙ は？",a:"Sₙ = n(a₁ + aₙ) / 2",opts:["Sₙ = a₁(1−rⁿ)/(1−r)","Sₙ = n(a₁+aₙ)/2","Sₙ = n²","Sₙ = a₁ + (n−1)d"]},
+{ id:"s3",unit:"数列",name:"等差数列の和（初項・公差）",f:"Sₙ = n{2a₁ + (n − 1)d} / 2",desc:"末項 aₙ を使わず、初項 a₁・公差 d・項数 n で表す。",q:"等差数列の和を初項・公差で表すと？",a:"Sₙ = n{2a₁ + (n − 1)d} / 2",opts:["Sₙ=n{2a₁+(n−1)d}/2","Sₙ=n(a₁+aₙ)","Sₙ=a₁rⁿ","Sₙ=n(a₁+d)/2"]},
+{ id:"s4",unit:"数列",name:"等比数列の一般項",f:"aₙ = a₁ rⁿ⁻¹",desc:"初項 a₁、公比 r。指数は n−1 になる点に注意。",q:"等比数列の一般項は？",a:"aₙ = a₁rⁿ⁻¹",opts:["aₙ=a₁+(n−1)d","aₙ=a₁rⁿ⁻¹","aₙ=a₁rⁿ","aₙ=a₁+n−1"]},
+{ id:"s5",unit:"数列",name:"等比数列の和（r ≠ 1）",f:"Sₙ = a₁(1 − rⁿ) / (1 − r)",desc:"初項 a₁、公比 r。r=1 のときは Sₙ=na₁。",q:"公比 r≠1 の等比数列の和は？",a:"Sₙ = a₁(1 − rⁿ) / (1 − r)",opts:["Sₙ=n(a₁+aₙ)/2","Sₙ=a₁(1−rⁿ)/(1−r)","Sₙ=a₁rⁿ⁻¹","Sₙ=n²a₁"]},
+{ id:"s6",unit:"数列",name:"等比数列の和（別表現）",f:"Sₙ = a₁(rⁿ − 1) / (r − 1)",desc:"上の式と同じ意味。分子・分母の符号をそろえた形。",q:"等比数列の和の別表現は？",a:"Sₙ = a₁(rⁿ − 1) / (r − 1)",opts:["Sₙ=a₁(rⁿ−1)/(r−1)","Sₙ=n(a₁+aₙ)/2","Sₙ=a₁+(n−1)d","Sₙ=a₁rⁿ"]},
+{ id:"s7",unit:"数列",name:"Σの基本公式：定数",f:"Σ(k=1→n) c = nc",desc:"同じ定数 c を n 個足す。",q:"Σ(k=1→n)c の値は？",a:"nc",opts:["nc","n(n+1)/2","n²","n(n+1)(2n+1)/6"]},
+{ id:"s8",unit:"数列",name:"自然数の和",f:"Σ(k=1→n) k = n(n + 1) / 2",desc:"1から n までの和。",q:"1+2+…+n の公式は？",a:"n(n + 1) / 2",opts:["n(n+1)/2","n²","n(n+1)(2n+1)/6","n(n+1)²/4"]},
+{ id:"s9",unit:"数列",name:"自然数の平方の和",f:"Σ(k=1→n) k² = n(n + 1)(2n + 1) / 6",desc:"1²+2²+…+n² の和。",q:"1²+2²+…+n² の公式は？",a:"n(n + 1)(2n + 1) / 6",opts:["n(n+1)/2","n(n+1)(2n+1)/6","{n(n+1)/2}²","n²(n+1)²/4"]},
+{ id:"s10",unit:"数列",name:"自然数の立方の和",f:"Σ(k=1→n) k³ = {n(n + 1) / 2}²",desc:"立方和は自然数の和の2乗になる。",q:"1³+2³+…+n³ の公式は？",a:"{n(n + 1) / 2}²",opts:["n(n+1)/2","n(n+1)(2n+1)/6","{n(n+1)/2}²","n³(n+1)"]},
+{ id:"s11",unit:"数列",name:"階差数列",f:"aₙ₊₁ − aₙ = bₙ",desc:"数列 aₙ の隣り合う項の差を bₙ とおく。aₙ を求めるときは差を足し戻す。",q:"階差数列 bₙ の定義は？",a:"bₙ = aₙ₊₁ − aₙ",opts:["bₙ=aₙ₊₁−aₙ","bₙ=aₙ₊₁+aₙ","bₙ=aₙ×aₙ₊₁","bₙ=aₙ/aₙ₊₁"]},
+{ id:"s12",unit:"数列",name:"階差数列から一般項",f:"aₙ = a₁ + Σ(k=1→n−1) bₖ  (n≧2)",desc:"階差 bₖ を a₁ に順に足して aₙ を作る。",q:"階差数列 bₙ から aₙ を求める式は？",a:"aₙ = a₁ + Σ(k=1→n−1)bₖ",opts:["aₙ=a₁+Σ(k=1→n−1)bₖ","aₙ=a₁bₙ","aₙ=a₁+nbₙ","aₙ=Σ(k=1→n)bₖ"]},
+{ id:"s13",unit:"数列",name:"Σの線形性",f:"Σ(ak + bk) = Σak + Σbk",desc:"和の中の足し算は、Σを分けて計算できる。定数倍も外に出せる。",q:"Σ(ak+bk) はどう分けられる？",a:"Σak + Σbk",opts:["Σak+Σbk","Σak×Σbk","Σak−Σbk","Σ(a+b)"]},
+{ id:"t1",unit:"統計的な推測",name:"標本平均",f:"x̄ = (x₁ + x₂ + … + xₙ) / n",desc:"標本のデータの合計を、データの個数 n で割る。",q:"標本平均 x̄ の式は？",a:"(x₁+x₂+…+xₙ)/n",opts:["(x₁+…+xₙ)/n","Σ(xᵢ−x̄)²/n","σ/√n","np"]},
+{ id:"t2",unit:"統計的な推測",name:"標本平均の期待値",f:"E(X̄) = μ",desc:"母平均 μ の母集団から標本を取ると、標本平均の期待値は母平均に等しい。",q:"標本平均の期待値 E(X̄) は？",a:"μ",opts:["μ","σ²","σ/√n","nμ"]},
+{ id:"t3",unit:"統計的な推測",name:"標本平均の標準偏差",f:"σ(X̄) = σ / √n",desc:"母標準偏差 σ、標本の大きさ n。標準誤差とも呼ばれる。",q:"標本平均の標準偏差は？",a:"σ / √n",opts:["σ√n","σ/n","σ/√n","σ²/n"]},
+{ id:"t4",unit:"統計的な推測",name:"二項分布の期待値",f:"E(X) = np",desc:"X が二項分布 B(n,p) に従うとき。",q:"X～B(n,p) の期待値は？",a:"np",opts:["np","np(1−p)","√np(1−p)","p/n"]},
+{ id:"t5",unit:"統計的な推測",name:"二項分布の分散",f:"V(X) = np(1 − p)",desc:"X が二項分布 B(n,p) に従うとき。",q:"X～B(n,p) の分散は？",a:"np(1 − p)",opts:["np","np(1−p)","√np(1−p)","n²p"]},
+{ id:"t6",unit:"統計的な推測",name:"二項分布の標準偏差",f:"σ(X) = √{np(1 − p)}",desc:"分散の平方根が標準偏差。",q:"X～B(n,p) の標準偏差は？",a:"√{np(1 − p)}",opts:["np(1−p)","√{np(1−p)}","np","√n p"]},
+{ id:"t7",unit:"統計的な推測",name:"信頼区間（母平均・母標準偏差既知）",f:"x̄ − 1.96·σ/√n ≦ μ ≦ x̄ + 1.96·σ/√n",desc:"母集団が正規分布、または標本サイズが十分大きい場合の95%信頼区間の代表形。授業で扱う条件を確認すること。",q:"95%信頼区間（母標準偏差既知）の幅の基準は？",a:"x̄ ± 1.96·σ/√n",opts:["x̄±1.96·σ/√n","x̄±σ√n","μ±1.96n","x̄±np"]},
+{ id:"t8",unit:"統計的な推測",name:"標準化",f:"Z = (X − μ) / σ",desc:"平均 μ、標準偏差 σ の確率変数を、平均0・標準偏差1の尺度に直す。",q:"確率変数 X の標準化は？",a:"Z = (X − μ) / σ",opts:["Z=(X−μ)/σ","Z=(X+μ)σ","Z=X/μ","Z=(μ−σ)/X"]}
+];
+const customFormulas = JSON.parse(localStorage.getItem("mathBCustomFormulas") || "[]");
+const photoData = JSON.parse(localStorage.getItem("mathBPhotos") || "[]");
+const formulas = [...builtInFormulas, ...customFormulas];
+const units=["数列","統計的な推測","学校独自の範囲"];
+let state=JSON.parse(localStorage.getItem("mathBMaster")||'{"mastered":[],"attempts":0,"correct":0,"enabled":["数列","統計的な推測"]}');
+const $=id=>document.getElementById(id);
+function save(){localStorage.setItem("mathBMaster",JSON.stringify(state));updateStats()}
+function activeFormulas(){return formulas.filter(f=>state.enabled.includes(f.unit))}
+function updateStats(){ $("mastered").textContent=state.mastered.length;$("attempts").textContent=state.attempts;$("rate").textContent=state.attempts?Math.round(state.correct/state.attempts*100)+"%":"—";$("masterProgress").style.width=(state.mastered.length/formulas.length*100)+"%";$("progressText").textContent=`${state.mastered.length} / ${formulas.length} 個の公式を「覚えた」に登録`; }
+function renderFilters(){let sel=$("unitFilter");sel.innerHTML='<option value="all">すべての分野</option>'+state.enabled.map(u=>`<option>${u}</option>`).join("")}
+function renderFormulas(){let q=$("search").value.toLowerCase(),u=$("unitFilter").value;let arr=activeFormulas().filter(f=>(u==="all"||f.unit===u)&&(f.name+f.desc+f.f).toLowerCase().includes(q));$("formulaCount").textContent=`${arr.length} 件`; $("formulaGrid").innerHTML=arr.length?arr.map(f=>`<article class="card"><span class="tag">${f.unit}</span><h3>${f.name}</h3><div class="formula">${f.f}</div><p class="explain">${f.desc}</p><div class="actions"><button class="btn ${state.mastered.includes(f.id)?"light":"ghost"}" onclick="toggleMaster('${f.id}')">${state.mastered.includes(f.id)?"✓ 覚えた":"覚えた！"}</button><button class="btn light" onclick="startSingle('${f.id}')">この公式をテスト</button></div></article>`).join(""):'<div class="empty">該当する公式がありません。</div>'}
+function toggleMaster(id){state.mastered=state.mastered.includes(id)?state.mastered.filter(x=>x!==id):[...state.mastered,id];save();renderFormulas();renderProgress()}
+function renderProgress(){$("masteredList").innerHTML=state.mastered.length?formulas.filter(f=>state.mastered.includes(f.id)).map(f=>`<div class="reviewitem"><div><b>${f.name}</b><div class="small">${f.unit} · ${f.f}</div></div><button class="btn light" onclick="toggleMaster('${f.id}')">解除</button></div>`).join(""):'<div class="empty">まだ登録されていません。公式一覧から「覚えた！」を押してみよう。</div>';updateStats()}
+let current=null,mode="quiz",queue=[],pos=0,sessionCorrect=0;
+function makeQuestion(f,box){delete box.dataset.done;let opts=[...f.opts].sort(()=>Math.random()-.5);box.innerHTML=`<div class="qmeta"><span>${f.unit} / ${f.name}</span><span>${mode==="test"?`${pos+1} / ${queue.length}`:"1問ずつ"}</span></div><div class="question">${f.q}</div><div class="answer">${opts.map(o=>`<button class="choice" data-value="${o.replace(/"/g,'&quot;')}">${o}</button>`).join("")}</div><div class="feedback" id="feedback"></div><div class="actions" style="margin-top:14px"><button class="btn" id="next" disabled>${mode==="test"?"次の問題":"次の問題へ"}</button></div>`;box.querySelectorAll(".choice").forEach(b=>b.addEventListener("click",()=>answer(b,f,box)));$("next").addEventListener("click",()=>nextQuestion(box))}
+function answer(btn,f,box){if(box.dataset.done)return;box.dataset.done="1";let good=btn.textContent===f.a;state.attempts++;if(good){state.correct++;sessionCorrect++}box.querySelectorAll(".choice").forEach(b=>{if(b.textContent===f.a)b.classList.add("correct");else if(b===btn)b.classList.add("wrong");b.disabled=true});let fb=box.querySelector(".feedback");fb.className="feedback show";fb.style.background=good?"#eaf8f2":"#fff0f2";fb.style.color=good?"#126747":"#a52d43";fb.innerHTML=(good?"正解！":"不正解。正解は「"+f.a+"」です。")+"<br>"+f.desc;$("next").disabled=false;save()}
+function nextQuestion(box){if(mode==="test"){pos++;if(pos>=queue.length){box.innerHTML=`<div class="question">テスト終了！</div><p>正解数：${sessionCorrect} / ${queue.length}</p><p>正答率：${Math.round(sessionCorrect/queue.length*100)}%</p><button class="btn" onclick="startTest()">もう一度テスト</button>`;return}makeQuestion(queue[pos],box)}else{let pool=activeFormulas();let f=pool[Math.floor(Math.random()*pool.length)];makeQuestion(f,box)}}
+function startSingle(id){mode="quiz";let f=formulas.find(x=>x.id===id);makeQuestion(f,$("quizBox"));document.querySelector('[data-tab="quiz"]').click()}
+function startQuiz(){mode="quiz";let pool=activeFormulas();if(!pool.length){$("quizBox").innerHTML='<div class="empty">授業範囲を設定してください。</div>';return}makeQuestion(pool[Math.floor(Math.random()*pool.length)],$("quizBox"))}
+function startTest(){mode="test";queue=[...activeFormulas()].sort(()=>Math.random()-.5).slice(0,Math.min(10,activeFormulas().length));pos=0;sessionCorrect=0;if(!queue.length){$("testBox").innerHTML='<div class="empty">授業範囲を設定してください。</div>';return}makeQuestion(queue[0],$("testBox"))}
+function renderSettings(){$("unitSettings").innerHTML=units.map(u=>`<label class="unitrow"><span><b>${u}</b><div class="small">${formulas.filter(f=>f.unit===u).length} 個の公式</div></span><input class="switch" type="checkbox" ${state.enabled.includes(u)?"checked":""} onchange="setUnit('${u}',this.checked)"></label>`).join("")}
+function setUnit(u,on){state.enabled=on?[...new Set([...state.enabled,u])]:state.enabled.filter(x=>x!==u);save();renderFilters();renderFormulas();if($("quiz").classList.contains("active"))startQuiz();if($("test").classList.contains("active"))startTest()}
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("active",p.id===b.dataset.tab));if(b.dataset.tab==="quiz"&&!$("quizBox").dataset.started){startQuiz();$("quizBox").dataset.started="1"}if(b.dataset.tab==="test")startTest();if(b.dataset.tab==="progress")renderProgress();if(b.dataset.tab==="scope")renderSettings()}));
+$("search").addEventListener("input",renderFormulas);$("unitFilter").addEventListener("change",renderFormulas);$("reset").addEventListener("click",()=>{if(confirm("学習記録をすべてリセットしますか？")){state={mastered:[],attempts:0,correct:0,enabled:["数列","統計的な推測"]};save();renderFormulas();renderProgress();renderSettings()}});
+
+function renderPhotos(){
+ const gallery=$("photoGallery");
+ gallery.innerHTML=photoData.length?photoData.map((src,i)=>`<div class="card"><img src="${src}" alt="取り込んだ公式写真 ${i+1}" style="width:100%;height:170px;object-fit:contain;border-radius:10px;background:#f5f6fa"><div class="actions" style="margin-top:8px"><span class="small">写真 ${i+1}</span><button class="btn ghost" onclick="removePhoto(${i})">削除</button></div></div>`).join(""):'<div class="empty">まだ写真がありません。上から画像を選んでね。</div>';
+}
+function removePhoto(i){photoData.splice(i,1);localStorage.setItem("mathBPhotos",JSON.stringify(photoData));renderPhotos()}
+$("photoFiles").addEventListener("change",async e=>{
+ const files=[...e.target.files].filter(f=>f.type.startsWith("image/"));
+ for(const file of files){
+  const data=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file)});
+  photoData.push(data);
+ }
+ try{localStorage.setItem("mathBPhotos",JSON.stringify(photoData));$("importMessage").textContent="写真を取り込みました。"}catch(err){$("importMessage").textContent="画像が大きすぎて保存できませんでした。枚数を減らすか、小さい画像を使ってください。";photoData.splice(0,files.length)}
+ renderPhotos();e.target.value="";
+});
+function renderCustomList(){
+ const custom=JSON.parse(localStorage.getItem("mathBCustomFormulas")||"[]");
+ $("customList").innerHTML=custom.length?custom.map(f=>`<div class="reviewitem"><div><b>${f.name}</b><div class="small">${f.unit} · ${f.f}</div></div><button class="btn ghost" onclick="deleteCustom('${f.id}')">削除</button></div>`).join(""):'<div class="empty">追加した公式はまだありません。</div>';
+}
+function deleteCustom(id){
+ let custom=JSON.parse(localStorage.getItem("mathBCustomFormulas")||"[]").filter(f=>f.id!==id);
+ localStorage.setItem("mathBCustomFormulas",JSON.stringify(custom));
+ state.mastered=state.mastered.filter(x=>x!==id);save();location.reload();
+}
+$("addFormula").addEventListener("click",()=>{
+ const unit=$("newUnit").value,name=$("newName").value.trim(),f=$("newFormula").value.trim(),desc=$("newDesc").value.trim(),q=$("newQuestion").value.trim(),a=$("newAnswer").value.trim(),opts=$("newOptions").value.split(",").map(x=>x.trim()).filter(Boolean);
+ if(!name||!f||!q||!a||opts.length!==4||!opts.includes(a)){
+  $("importMessage").textContent="公式名・公式・問題文・正解を入力し、正解を含む選択肢を4つ用意してください。";return;
+ }
+ const custom=JSON.parse(localStorage.getItem("mathBCustomFormulas")||"[]");
+ const id="custom_"+Date.now();
+ custom.push({id,unit,name,f,desc,q,a,opts});
+ localStorage.setItem("mathBCustomFormulas",JSON.stringify(custom));
+ if(!state.enabled.includes(unit)){state.enabled.push(unit);save()}
+ $("importMessage").textContent="公式を追加しました！公式一覧とクイズに反映されます。";
+ ["newName","newFormula","newDesc","newQuestion","newAnswer","newOptions"].forEach(id=>$(id).value="");
+ renderCustomList();renderFilters();renderFormulas();renderSettings();
+});
+
+renderPhotos();renderCustomList();renderFilters();renderFormulas();renderProgress();renderSettings();startQuiz();
+</script>
+</body></html>
